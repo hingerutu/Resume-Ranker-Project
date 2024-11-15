@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<!-- your_template.html -->
+{% for tweet in tweets %}
+    <div>
+        <p>{{ tweet.Name }}</p>
+        {% if tweet.id %}  <!-- Check if tweet.id is not empty -->
+            <a href="{% url 'tweet_delete' tweet.id %}">Delete</a>  <!-- Correct URL generation -->
+        {% else %}
+            <span>No ID available</span>
+        {% endif %}
+    </div>
+{% endfor %}
+
+{% endblock %}

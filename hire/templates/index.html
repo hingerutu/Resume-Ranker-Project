@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<br>
+<br>
+<a class="btn btn-primary" href="{% url 'apply' %}"> Upload your resume </a> <br> <br>
+
+<a class="btn btn-primary" href="{% url 'resume_list' %}"> all the resumes </a> 
+
+{% endblock %}
